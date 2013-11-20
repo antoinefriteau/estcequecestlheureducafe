@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<title>Est-ce que c'est l'heure du cafe ? - estcequecestlheureducafe.fr</title>
+		<meta name="description" content="Savoir s'il est encore temps d'aller au cinéma" />
+		<meta http-equiv="content-language" content="fr">
+
+		<meta property="og:type" content="website"/>
+		<meta property="og:title" content="L'instant Cinéma - estcequecestlheureducafe.fr"/>
+		<meta property="og:description" content="Savoir s'il est encore temps d'aller au cinéma"/>
+		<meta property="og:url" content="http://estcequecestlheureducafe.fr/"/>
+		<meta property="og:image" content="http://estcequecestlheureducafe.fr/img/logo_estcequecestlheureducafe.jpg"/>
+		<meta property="og:site_name" content="estcequecestlheureducafe"/>
+
+		<!--<base href="http://estcequecestlheureducafe.fr/" />-->
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+
+		<link href="./css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="./css/custom.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<!--[if IE]>
+			<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
+
+		<link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+
+
+		<header>
+			<h1 id="title">Si on veut, c'est toujours l'heure du café ;)</h1>
+		</header>
+
+		<section id="data">
+		</section>
+
+		<section class="social_share">
+			<a href="http://twitter.com/?status=Est-ce+que+c%27est+l%27heure+du+café+%3f%20http://estcequecestlheureducafe.fr">Partagez sur Twitter</a>
+			<a href="http://www.facebook.com/sharer/sharer.php?u=http://estcequecestlheureducafe.fr">Partagez sur Facebook</a>
+			<a href="https://plus.google.com/share?url=http://estcequecestlheureducafe.fr/">Partagez sur Google+</a>
+		</section>
+
+		<footer>
+			© estcequecestlheureducafe.fr 2013
+		</footer>
+
+	</body>
+
+	<script type="text/javascript">
+		var json = {
+					"time": [
+								{
+									"start": 0,
+									"end": 6,
+									"response": 0,
+									"data": "Tu rigoles, tu ne devrais même pas encore être levé !"
+								},
+								{
+									"start": 6,
+									"end": 8,
+									"response": 1,
+									"data": "Petit déjeuner ! C'est l'heure de"
+								},
+								{
+									"start": 8,
+									"end": 10,
+									"response": 0,
+									"data": "Soit patient..."
+								},
+								{
+									"start": 10,
+									"end": 11,
+									"response": 1,
+									"data": "Café !"
+								},
+								{
+									"start": 11,
+									"end": 12,
+									"response": 0,
+									"data": "Attend après manger."
+								},
+								{
+									"start": 12,
+									"end": 14,
+									"response": 1,
+									"data": "Savourer un bon petit café après manger..."
+								},
+								{
+									"start": 14,
+									"end": 16,
+									"response": 0,
+									"data": "Attend encore un peu."
+								},
+								{
+									"start": 16,
+									"end": 18,
+									"response": 1,
+									"data": "Café !"
+								},
+								{
+									"start": 18,
+									"end": 24,
+									"response": 0,
+									"data": "Attention, tu risques de ne pas pouvoir t\'endormir..."
+								}
+					]
+		};
+
+	// <a href="http://fr.wikipedia.org/wiki/Liste_de_vari%C3%A9t%C3%A9s_de_caf%C3%A9#Arabicas_.28Coffea_arabica.29">Arabica</a>.
+	// <a href="http://fr.wikipedia.org/wiki/Liste_de_vari%C3%A9t%C3%A9s_de_caf%C3%A9#Robustas_.28Coffea_canephora.29">Robusta</a>.
+
+		if(Object.prototype.toString.call( json.time ) === '[object Array]') {
+
+			var date = new Date(),
+				time = date.getHours();
+
+			for(key in json.time) {
+
+				if( ( time == json.time[key].start || time > json.time[key].start ) && time < json.time[key].end ) {
+
+					var title = document.getElementById('title');
+
+					switch(json.time[key].response) {
+						case 0:
+							title.innerText = 'Non';
+							break;
+						case 1:
+							title.innerText = 'Oui';
+							break;
+					}
+
+					var databloc = document.getElementById('data');
+
+					databloc.innerText = json.time[key].data;
+
+				}
+
+			}
+
+		}
+
+
+	</script>
+
+</html>
