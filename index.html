@@ -7,13 +7,13 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<title>Est-ce que c'est l'heure du cafe ? - estcequecestlheureducafe.fr</title>
-		<meta name="description" content="Savoir s'il est encore temps d'aller au cinéma" />
+		<title>L'instant Café, Est-ce que c'est l'heure du cafe ? - estcequecestlheureducafe.fr</title>
+		<meta name="description" content="Savoir s'il est l'heure de déguster un bon café." />
 		<meta http-equiv="content-language" content="fr">
 
 		<meta property="og:type" content="website"/>
-		<meta property="og:title" content="L'instant Cinéma - estcequecestlheureducafe.fr"/>
-		<meta property="og:description" content="Savoir s'il est encore temps d'aller au cinéma"/>
+		<meta property="og:title" content="L'instant Café - estcequecestlheureducafe.fr"/>
+		<meta property="og:description" content="Savoir s'il est l'heure de déguster un bon café."/>
 		<meta property="og:url" content="http://estcequecestlheureducafe.fr/"/>
 		<meta property="og:image" content="http://estcequecestlheureducafe.fr/img/logo_estcequecestlheureducafe.jpg"/>
 		<meta property="og:site_name" content="estcequecestlheureducafe"/>
@@ -27,7 +27,9 @@
 			<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<![endif]-->
 
-		<link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<!--<link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>-->
+		<link href='//fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -41,9 +43,8 @@
 
 	<body>
 
-
 		<header>
-			<h1 id="title">Si on veut, c'est toujours l'heure du café ;)</h1>
+			<h1 id="title">L'instant Café - estcequecestlheureducafe.fr</h1>
 		</header>
 
 		<section id="data">
@@ -137,10 +138,10 @@
 
 					switch(json.time[key].response) {
 						case 0:
-							title.innerText = 'Non.';
+							title.innerText = 'Non';
 							break;
 						case 1:
-							title.innerText = 'Oui.';
+							title.innerText = 'Oui';
 							break;
 					}
 
@@ -153,8 +154,6 @@
 			}
 
 		}
-
-
 	</script>
 
 </html>
