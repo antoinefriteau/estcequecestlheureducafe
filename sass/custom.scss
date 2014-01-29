@@ -34,15 +34,7 @@ body {
 	font-size: 16px;
 	line-height: 100%;
 	color: #222;
-
-	background: #e9e3d3;
-	background: -webkit-linear-gradient(bottom, #fff 0%, #e9e3d3 70%);
-	background: -moz-linear-gradient(bottom, #fff 0%, #e9e3d3 70%);
-	background: -ms-linear-gradient(bottom, #fff 0%, #e9e3d3 70%);
-	background: -o-linear-gradient(bottom, #fff 0%, #e9e3d3 70%);
-	background: linear-gradient(bottom, #fff 0%,#e9e3d3 70%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFe9e3d3', endColorstr='#FFFFFFFF',GradientType=0);
-	background-attachment: fixed;
+	background: white;
 }
 
 @mixin transition($type: all, $duration: 0.3s) {
@@ -78,15 +70,13 @@ a {
 	text-align: center;
 	font-size: 1.8em;
 	line-height: 1.8em;
-	font-weight: bold;
-	font-family: 'Indie Flower';
+	font-weight: 300;
 }
 
 .social_share {
 	min-height: 36px;
 	max-width: 432px;
 	margin: 60px auto 0 auto;
-	font-family: 'Indie Flower';
 	padding-bottom: 32px;
 
 	a {
@@ -98,12 +88,13 @@ a {
 		background-color: #3da1d1;
 		border-radius: 2px;
 		text-align: center;
-		font-size: 0.8em;
+		font-size: 0.75em;
 		line-height: 0.75em;
-		font-weight: 400;
+		font-weight: 300;
 		color: white;
 		text-decoration: none;
 		box-shadow: 0px 0px 8px rgba(0,0,0,.2);
+		margin: 0 1px 12px 1px;
 
 		&:hover {
 			@include transition(background-color, 0.5s);
